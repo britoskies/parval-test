@@ -1,0 +1,14 @@
+{
+    "requests": [
+      {
+        "id": 1,
+        "name": "John Doe",
+        "email": "john@example.com",
+        "type": "Inquiry",
+        "description": "I have a question about my investment",
+        "status": "Pending",
+        "createdAt": "2025-07-01T12:00:00Z"
+      }
+    ]
+  }
+  

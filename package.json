@@ -13,11 +13,13 @@
     "@tailwindcss/vite": "^4.1.11",
     "@tanstack/react-query": "^5.83.0",
     "clsx": "^2.1.1",
+    "json-server": "^1.0.0-beta.3",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-hook-form": "^7.60.0",
     "react-hot-toast": "^2.5.2",
-    "react-router": "^7.6.3"
+    "react-router": "^7.6.3",
+    "serverless-http": "^3.2.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.30.1",

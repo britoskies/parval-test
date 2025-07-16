@@ -1,69 +1,98 @@
-# React + TypeScript + Vite
+# Customer Support Portal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web tipo portal de atención a clientes que simula el módulo de “gestión de solicitudes”. Esta app permitirá listar solicitudes existentes, ver su detalle, y registrar nuevas solicitudes desde un formulario.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📦 Instalación & Ejecución
 
-## Expanding the ESLint configuration
+1. **Clona el repositorio**
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+   ```bash
+   git clone https://github.com/britoskies/parval-test.git
+   cd parval-test
+   ```
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+2. **Instala dependencias**
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+   ```bash
+   npm install
+   # o
+   yarn install
+   ```
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+3. **Levanta la aplicación en desarrollo**
+
+   ```bash
+   npm run dev
+   # o
+   yarn dev
+   ```
+
+   Esto iniciará un servidor en `http://localhost:5173`.
+
+4. **Levanta el json local para la data mock en desarrollo**
+
+   ```bash
+   npx json-server ./src/db/mock.json
+   ```
+
+   Esto iniciará un servidor en `http://localhost:3000/requests`.
+
+5. **Build para producción**
+
+   ```bash
+   npm run build
+   # o
+   yarn build
+   ```
+
+   Los archivos estáticos se generan en la carpeta `dist/`.
+
+6. **Servidor de producción local (opcional)**
+
+   ```bash
+   npm run serve
+   # o
+   yarn serve
+   ```
+
+---
+
+## 🏗 Arquitectura y librerías usadas
+
+La aplicación sigue una estructura modular y escalable, dividida en carpetas según responsabilidad:
+
+```
+src/
+├─ assets/           # Imágenes y SVGs
+├─ components/       # Componentes reutilizables (UI)
+│  └─ common/        # Botones, encabezados, tablas, etc.
+├─ features/         # Lógica y UI por dominio (requests)
+│  ├─ hooks/         # React Query hooks para API
+│  └─ components/    # Subcomponentes específicos del feature
+├─ layouts/          # Layouts (MainLayout, NavBar)
+├─ routes/           # Rutas declarativas (React Router v6)
+├─ services/         # Instancia de Axios y manejadores de error
+├─ utils/            # Helpers, constantes, formateadores
+└─ pages/            # Páginas principales (Home, Details, Form)
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+**Principales librerías**:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **React** + **TypeScript**: base de la UI.
+- **Tailwind CSS**: utilidades de estilos.
+- **React Query (TanStack)** v5: fetching y cache de datos.
+- **React Router** v6: navegación declarativa.
+- **React Hook Form**: manejo y validación de formularios.
+- **React Hot Toast**: notificaciones toast.
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+
+## 🌐 Despliegue
+
+La app está desplegada en Netlify:
+
+**[https://parvaltest.netlify.app/](https://parvaltest.netlify.app/)**
+
+---

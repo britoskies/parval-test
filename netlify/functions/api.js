@@ -4,7 +4,7 @@ const serverless = require("serverless-http");
 
 // Create a json-server instance
 const server = jsonServer.create();
-const router = jsonServer.router(path.resolve(__dirname, "../../db/mock.json"));
+const router = jsonServer.router(path.resolve(__dirname, "../../src/db/mock.json"));
 const middlewares = jsonServer.defaults();
 
 server.use(middlewares);

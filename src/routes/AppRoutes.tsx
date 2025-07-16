@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router';
 
-import MainLayout from './MainLayout';
+import MainLayout from '../components/layouts/MainLayout';
 import HomePage from '../pages/Home';
 import CreateRequestPage from '../pages/CreateRequest';
 import RequestDetailsPage from '../pages/RequestDetails';

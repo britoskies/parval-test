@@ -1,14 +1,436 @@
 {
-    "requests": [
-      {
-        "id": 1,
-        "name": "John Doe",
-        "email": "john@example.com",
-        "type": "Inquiry",
-        "description": "I have a question about my investment",
-        "status": "Pending",
-        "createdAt": "2025-07-01T12:00:00Z"
-      }
-    ]
-  }
-  
+  "requests": [
+    {
+      "id": "1",
+      "name": "John Doe",
+      "email": "john@example.com",
+      "type": "Inquiry",
+      "description": "I have a question about my investment",
+      "status": "In Progress",
+      "createdAt": "2025-07-01T12:00:00Z"
+    },
+    {
+      "id": "2",
+      "name": "Ronald Brito",
+      "email": "britoskies@gmail.com",
+      "type": "Complaint",
+      "description": "My fridge lacks cooling",
+      "status": "In Progress",
+      "createdAt": "2025-07-14T05:25:42.730Z"
+    },
+    {
+      "id": "3",
+      "name": "Alice Johnson",
+      "email": "alice.johnson@example.com",
+      "type": "Inquiry",
+      "description": "I'd like details about your new plans",
+      "status": "Closed",
+      "createdAt": "2025-07-02T09:15:00Z"
+    },
+    {
+      "id": "4",
+      "name": "Michael Smith",
+      "email": "michael.smith@example.com",
+      "type": "Complaint",
+      "description": "My internet connection is unstable",
+      "status": "Pending",
+      "createdAt": "2025-07-05T14:30:00Z"
+    },
+    {
+      "id": "5",
+      "name": "Emily Davis",
+      "email": "emily.davis@example.com",
+      "type": "Suggestion",
+      "description": "Please add a dark mode feature",
+      "status": "In Progress",
+      "createdAt": "2025-07-06T08:45:00Z"
+    },
+    {
+      "id": "6",
+      "name": "David Wilson",
+      "email": "david.wilson@example.com",
+      "type": "Feature Request",
+      "description": "Integrate with our mobile app",
+      "status": "Closed",
+      "createdAt": "2025-06-28T11:20:00Z"
+    },
+    {
+      "id": "7",
+      "name": "Sarah Brown",
+      "email": "sarah.brown@example.com",
+      "type": "Technical Support",
+      "description": "Error code 500 on login",
+      "status": "Pending",
+      "createdAt": "2025-07-03T16:10:00Z"
+    },
+    {
+      "id": "8",
+      "name": "Chris Lee",
+      "email": "chris.lee@example.com",
+      "type": "Billing Inquiry",
+      "description": "Incorrect charge on my account",
+      "status": "In Progress",
+      "createdAt": "2025-07-04T10:05:00Z"
+    },
+    {
+      "id": "9",
+      "name": "Jessica Taylor",
+      "email": "jessica.taylor@example.com",
+      "type": "Inquiry",
+      "description": "What are your business hours?",
+      "status": "Closed",
+      "createdAt": "2025-07-07T09:00:00Z"
+    },
+    {
+      "id": "10",
+      "name": "Daniel Anderson",
+      "email": "daniel.anderson@example.com",
+      "type": "Complaint",
+      "description": "I received a damaged product",
+      "status": "Pending",
+      "createdAt": "2025-06-30T13:55:00Z"
+    },
+    {
+      "id": "11",
+      "name": "Laura Martinez",
+      "email": "laura.martinez@example.com",
+      "type": "Suggestion",
+      "description": "Offer student discounts",
+      "status": "In Progress",
+      "createdAt": "2025-07-08T12:40:00Z"
+    },
+    {
+      "id": "12",
+      "name": "Kevin Thomas",
+      "email": "kevin.thomas@example.com",
+      "type": "Feature Request",
+      "description": "Add multi-language support",
+      "status": "Closed",
+      "createdAt": "2025-06-25T15:25:00Z"
+    },
+    {
+      "id": "13",
+      "name": "Anna Jackson",
+      "email": "anna.jackson@example.com",
+      "type": "Technical Support",
+      "description": "Cannot reset my password",
+      "status": "Pending",
+      "createdAt": "2025-07-09T11:15:00Z"
+    },
+    {
+      "id": "14",
+      "name": "Robert White",
+      "email": "robert.white@example.com",
+      "type": "Billing Inquiry",
+      "description": "Need invoice for last month",
+      "status": "In Progress",
+      "createdAt": "2025-07-10T08:30:00Z"
+    },
+    {
+      "id": "15",
+      "name": "Karen Harris",
+      "email": "karen.harris@example.com",
+      "type": "Inquiry",
+      "description": "How do I change my subscription plan?",
+      "status": "Closed",
+      "createdAt": "2025-06-20T14:00:00Z"
+    },
+    {
+      "id": "16",
+      "name": "Steven Clark",
+      "email": "steven.clark@example.com",
+      "type": "Complaint",
+      "description": "Slow response from customer service",
+      "status": "Pending",
+      "createdAt": "2025-07-11T09:45:00Z"
+    },
+    {
+      "id": "17",
+      "name": "Megan Lewis",
+      "email": "megan.lewis@example.com",
+      "type": "Suggestion",
+      "description": "Improve website accessibility",
+      "status": "In Progress",
+      "createdAt": "2025-07-12T10:10:00Z"
+    },
+    {
+      "id": "18",
+      "name": "Jason Robinson",
+      "email": "jason.robinson@example.com",
+      "type": "Feature Request",
+      "description": "Integrate payment gateway X",
+      "status": "Closed",
+      "createdAt": "2025-06-22T16:00:00Z"
+    },
+    {
+      "id": "19",
+      "name": "Rachel Walker",
+      "email": "rachel.walker@example.com",
+      "type": "Technical Support",
+      "description": "Page loads slowly on Safari",
+      "status": "Pending",
+      "createdAt": "2025-07-13T14:20:00Z"
+    },
+    {
+      "id": "20",
+      "name": "Justin Hall",
+      "email": "justin.hall@example.com",
+      "type": "Billing Inquiry",
+      "description": "Refund request for order #12345",
+      "status": "In Progress",
+      "createdAt": "2025-06-29T17:35:00Z"
+    },
+    {
+      "id": "21",
+      "name": "Olivia Allen",
+      "email": "olivia.allen@example.com",
+      "type": "Inquiry",
+      "description": "Is there a mobile app available?",
+      "status": "Closed",
+      "createdAt": "2025-06-18T12:00:00Z"
+    },
+    {
+      "id": "22",
+      "name": "Eric Young",
+      "email": "eric.young@example.com",
+      "type": "Complaint",
+      "description": "App crashes on startup",
+      "status": "Pending",
+      "createdAt": "2025-07-01T18:05:00Z"
+    },
+    {
+      "id": "23",
+      "name": "Brittany King",
+      "email": "brittany.king@example.com",
+      "type": "Suggestion",
+      "description": "Add more payment options",
+      "status": "In Progress",
+      "createdAt": "2025-06-27T09:55:00Z"
+    },
+    {
+      "id": "24",
+      "name": "Aaron Wright",
+      "email": "aaron.wright@example.com",
+      "type": "Feature Request",
+      "description": "Support a dark theme",
+      "status": "Closed",
+      "createdAt": "2025-06-24T13:10:00Z"
+    },
+    {
+      "id": "25",
+      "name": "Stephanie Lopez",
+      "email": "stephanie.lopez@example.com",
+      "type": "Technical Support",
+      "description": "Unable to upload profile picture",
+      "status": "Pending",
+      "createdAt": "2025-07-02T10:00:00Z"
+    },
+    {
+      "id": "26",
+      "name": "Brandon Hill",
+      "email": "brandon.hill@example.com",
+      "type": "Billing Inquiry",
+      "description": "Price mismatch on invoice",
+      "status": "In Progress",
+      "createdAt": "2025-07-03T12:45:00Z"
+    },
+    {
+      "id": "27",
+      "name": "Michelle Scott",
+      "email": "michelle.scott@example.com",
+      "type": "Inquiry",
+      "description": "How do I delete my account?",
+      "status": "Closed",
+      "createdAt": "2025-06-21T08:20:00Z"
+    },
+    {
+      "id": "28",
+      "name": "Patrick Green",
+      "email": "patrick.green@example.com",
+      "type": "Complaint",
+      "description": "Notifications are not working",
+      "status": "Pending",
+      "createdAt": "2025-07-04T15:15:00Z"
+    },
+    {
+      "id": "29",
+      "name": "Kimberly Adams",
+      "email": "kimberly.adams@example.com",
+      "type": "Suggestion",
+      "description": "Add a scheduling feature",
+      "status": "In Progress",
+      "createdAt": "2025-06-26T11:30:00Z"
+    },
+    {
+      "id": "30",
+      "name": "Edward Baker",
+      "email": "edward.baker@example.com",
+      "type": "Feature Request",
+      "description": "Export data as CSV",
+      "status": "Closed",
+      "createdAt": "2025-06-23T14:50:00Z"
+    },
+    {
+      "id": "68f8",
+      "name": "Yurelys Ramirez",
+      "email": "yure@gmail.com",
+      "type": "Suggestion",
+      "description": "Create a new IT department",
+      "status": "Pending",
+      "createdAt": "2025-07-16T01:24:46.109Z"
+    },
+    {
+      "id": "d978",
+      "name": "Yurelys Ramirez",
+      "email": "britoskies@gmail.com",
+      "type": "Inquiry",
+      "description": "klkl",
+      "status": "Pending",
+      "createdAt": "2025-07-16T01:38:37.304Z"
+    },
+    {
+      "id": "0ba0",
+      "name": "Yurelys Ramirez",
+      "email": "britoskies@gmail.com",
+      "type": "Suggestion",
+      "description": "sss",
+      "status": "Pending",
+      "createdAt": "2025-07-16T01:39:05.481Z"
+    },
+    {
+      "id": "78f2",
+      "name": "Yurelys Ramirez",
+      "email": "britoskies@gmail.com",
+      "type": "Suggestion",
+      "description": "sdfsdf",
+      "status": "Pending",
+      "createdAt": "2025-07-16T02:21:34.772Z"
+    },
+    {
+      "id": "8e79",
+      "name": "Ronald Manuel Brito Hiraldo",
+      "email": "britoskies@gmail.com",
+      "type": "Complaint",
+      "description": "asdfsdf",
+      "status": "Pending",
+      "createdAt": "2025-07-16T02:22:01.991Z"
+    },
+    {
+      "id": "42df",
+      "name": "Yurelys Ramirez",
+      "email": "britoskies@gmail.com",
+      "type": "Inquiry",
+      "description": "...",
+      "status": "Pending",
+      "createdAt": "2025-07-16T02:32:46.141Z"
+    },
+    {
+      "id": "14ce",
+      "name": "Yurelys Ramirez",
+      "email": "britoskies@gmail.com",
+      "type": "Suggestion",
+      "description": "s",
+      "status": "Pending",
+      "createdAt": "2025-07-16T02:34:04.174Z"
+    },
+    {
+      "id": "4d72",
+      "name": "Yurelys Ramirez",
+      "email": "britoskies@gmail.com",
+      "type": "Feature Request",
+      "description": "...",
+      "status": "Pending",
+      "createdAt": "2025-07-16T02:37:25.046Z"
+    },
+    {
+      "id": "3e66",
+      "name": "Yurelys Ramirez",
+      "email": "britoskies@gmail.com",
+      "type": "Complaint",
+      "description": "bbb",
+      "status": "Pending",
+      "createdAt": "2025-07-16T02:39:14.126Z"
+    },
+    {
+      "id": "f67e",
+      "name": "Yurelys Ramirez",
+      "email": "britoskies@gmail.com",
+      "type": "Complaint",
+      "description": "dd",
+      "status": "Pending",
+      "createdAt": "2025-07-16T02:42:16.856Z"
+    },
+    {
+      "id": "f8f8",
+      "name": "Yurelys Ramirez",
+      "email": "britoskies@gmail.com",
+      "type": "Suggestion",
+      "description": "dd",
+      "status": "Pending",
+      "createdAt": "2025-07-16T02:42:47.727Z"
+    },
+    {
+      "id": "3aec",
+      "name": "Yurelys Ramirez",
+      "email": "britoskies@gmail.com",
+      "type": "Complaint",
+      "description": "ddd",
+      "status": "Pending",
+      "createdAt": "2025-07-16T02:46:53.416Z"
+    },
+    {
+      "id": "b211",
+      "name": "Yurelys Ramirez",
+      "email": "britoskies@gmail.com",
+      "type": "Suggestion",
+      "description": "sss",
+      "status": "Pending",
+      "createdAt": "2025-07-16T02:47:55.425Z"
+    },
+    {
+      "id": "7677",
+      "name": "Yurelys Ramirez",
+      "email": "britoskies@gmail.com",
+      "type": "Suggestion",
+      "description": "ahora",
+      "status": "Pending",
+      "createdAt": "2025-07-16T02:52:47.282Z"
+    },
+    {
+      "id": "6983",
+      "name": "Yurelys Ramirez",
+      "email": "britoskies@gmail.com",
+      "type": "Complaint",
+      "description": "aaa",
+      "status": "Pending",
+      "createdAt": "2025-07-16T02:54:18.478Z"
+    },
+    {
+      "id": "2c49",
+      "name": "Yurelys Ramirez",
+      "email": "britoskies@gmail.com",
+      "type": "Suggestion",
+      "description": "s",
+      "status": "Pending",
+      "createdAt": "2025-07-16T02:56:10.684Z"
+    },
+    {
+      "id": "ee5a",
+      "name": "Yurelys Ramirez",
+      "email": "britoskies@gmail.com",
+      "type": "Complaint",
+      "description": "ddd",
+      "status": "Pending",
+      "createdAt": "2025-07-16T02:59:05.740Z"
+    },
+    {
+      "id": "2e93",
+      "name": "Victor Brito",
+      "email": "vbrito@gmail.com",
+      "type": "Technical Support",
+      "description": "My pc is not turning off",
+      "status": "Pending",
+      "createdAt": "2025-07-16T13:56:54.811Z"
+    }
+  ]
+}

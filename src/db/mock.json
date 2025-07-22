@@ -431,6 +431,16 @@
       "description": "My pc is not turning off",
       "status": "Pending",
       "createdAt": "2025-07-16T13:56:54.811Z"
+    },
+    {
+      "id": "b4f3",
+      "name": "Yurelys Ramirez",
+      "cedula": "402-1346855-2",
+      "email": "yu@gmail.com",
+      "type": "Technical Support",
+      "description": "The best",
+      "status": "Closed",
+      "createdAt": "2025-07-21T23:17:15.904Z"
     }
   ]
 }

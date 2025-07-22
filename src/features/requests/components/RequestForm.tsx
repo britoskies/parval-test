@@ -2,9 +2,11 @@ import toast from "react-hot-toast";
 import Input from "../../../components/common/Input";
 import Button from "../../../components/common/Button";
 
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router";
 import { useCreateRequest } from "../hooks/useRequests";
+import { formatCedula } from "./../../../utils/helpers";
 import type { NewRequest } from "../types/request";
 
 const RequestForm = () => {
@@ -16,6 +18,7 @@ const RequestForm = () => {
 
   const navigate = useNavigate();
   const { mutate, isPending } = useCreateRequest();
+  const [cedula, setCedula] = useState<string>("");
 
   const selectOptions = [
     { selectOption: "Select a request type", selectValue: "" },
@@ -38,9 +41,14 @@ const RequestForm = () => {
     });
   };
 
+  const handleChange = (value: string) => {
+    setCedula(formatCedula(value.replace(/[^0-9-]/g, "")));
+  };
+
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="px-4 space-y-4">
       <Input
+        id="name"
         type="text"
         label="Your Name"
         placeholder="Enter your full name"
@@ -48,6 +56,23 @@ const RequestForm = () => {
         register={register("name", { required: "Name is required" })}
       />
       <Input
+        id="cedula"
+        type="text"
+        label="Identification Number (ID)"
+        value={cedula}
+        placeholder="___-_______-_"
+        errorMessage={errors.cedula?.message}
+        register={register("cedula", {
+          required: "Cedula is required",
+          pattern: {
+            value: /^\d{3}-\d{7}-\d$/,
+            message: "Formato inválido: debe ser 000-0000000-0",
+          },
+        })}
+        onChange={(e) => handleChange(e.target.value)}
+      />
+      <Input
+        id="email"
         type="text"
         label="Email Address"
         placeholder="Enter your email address"
@@ -61,6 +86,7 @@ const RequestForm = () => {
         })}
       />
       <Input
+        id="type"
         type="select"
         label="Request Type"
         placeholder="Enter your full name"
@@ -69,6 +95,7 @@ const RequestForm = () => {
         register={register("type", { required: "Please select a type" })}
       />
       <Input
+        id="description"
         type="textarea"
         label="Description"
         placeholder="Describe your request in detail"

@@ -40,7 +40,7 @@ const RequestTable: React.FC<TableProps> = ({ data }) => (
               </td>
               <td className="col-3 h-[72px] px-4 py-2 text-sm">
                 <span
-                  className={`inline-flex min-w-[84px] h-8 items-center justify-center px-4 text-sm font-semibold rounded-lg whitespace-nowrap ${
+                  className={`inline-flex w-100 max-w-[100px] h-8 items-center justify-center px-4 text-sm font-semibold rounded-lg whitespace-nowrap ${
                     request.status === REQUEST_STATUS.PENDING
                       ? "bg-yellow-100 text-yellow-800"
                       : request.status === REQUEST_STATUS.IN_PROGRESS
@@ -64,7 +64,6 @@ const RequestTable: React.FC<TableProps> = ({ data }) => (
         </tbody>
       </table>
     </div>
-    <style>{`@container (max-width:120px) { .col-1{display:none;} } @container (max-width:240px) { .col-2{display:none;} } @container (max-width:360px) { .col-3{display:none;} } @container (max-width:480px) { .col-4{display:none;} }`}</style>
   </div>
 );
 

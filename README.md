@@ -1,98 +1,96 @@
 # Customer Support Portal
 
-Aplicación web tipo portal de atención a clientes que simula el módulo de “gestión de solicitudes”. Esta app permitirá listar solicitudes existentes, ver su detalle, y registrar nuevas solicitudes desde un formulario.
+A web application that simulates a customer support portal’s “request management” module. This app lets you list existing requests, view their details, and create new requests via a form.
 
 ---
 
-## 📦 Instalación & Ejecución
+## 📦 Installation & Running Locally
 
-1. **Clona el repositorio**
+1. **Clone the repository**
 
    ```bash
    git clone https://github.com/britoskies/parval-test.git
    cd parval-test
    ```
 
-2. **Instala dependencias**
+2. **Install dependencies**
 
    ```bash
    npm install
-   # o
+   # or
    yarn install
    ```
 
-3. **Levanta la aplicación en desarrollo**
+3. **Start the development server**
 
    ```bash
    npm run dev
-   # o
+   # or
    yarn dev
    ```
 
-   Esto iniciará un servidor en `http://localhost:5173`.
+   This will launch the app at `http://localhost:5173`.
 
-4. **Levanta el json local para la data mock en desarrollo**
+4. **Start the local JSON mock server**
 
    ```bash
    npx json-server ./src/db/mock.json
    ```
 
-   Esto iniciará un servidor en `http://localhost:3000/requests`.
+   This will serve the mock data at `http://localhost:3000/requests`.
 
-5. **Build para producción**
+5. **Build for production**
 
    ```bash
    npm run build
-   # o
+   # or
    yarn build
    ```
 
-   Los archivos estáticos se generan en la carpeta `dist/`.
+   Static files are generated in the `dist/` folder.
 
-6. **Servidor de producción local (opcional)**
+6. **Optional: Serve the production build locally**
 
    ```bash
    npm run serve
-   # o
+   # or
    yarn serve
    ```
 
 ---
 
-## 🏗 Arquitectura y librerías usadas
+## 🏗 Architecture & Libraries Used
 
-La aplicación sigue una estructura modular y escalable, dividida en carpetas según responsabilidad:
+The app follows a modular, scalable folder structure organized by responsibility:
 
 ```
 src/
-├─ assets/           # Imágenes y SVGs
-├─ components/       # Componentes reutilizables (UI)
-│  └─ common/        # Botones, encabezados, tablas, etc.
-├─ features/         # Lógica y UI por dominio (requests)
-│  ├─ hooks/         # React Query hooks para API
-│  └─ components/    # Subcomponentes específicos del feature
-├─ layouts/          # Layouts (MainLayout, NavBar)
-├─ routes/           # Rutas declarativas (React Router v6)
-├─ services/         # Instancia de Axios y manejadores de error
-├─ utils/            # Helpers, constantes, formateadores
-└─ pages/            # Páginas principales (Home, Details, Form)
+├─ assets/           # Images and SVGs
+├─ components/       # Reusable UI components
+│  └─ common/        # Buttons, headers, tables, etc.
+├─ features/         # Domain-specific logic & UI (requests)
+│  ├─ hooks/         # React Query hooks for API calls
+│  └─ components/    # Feature-specific subcomponents
+ ├─ layouts/          # Layout components (MainLayout, NavBar)
+├─ routes/           # Declarative routes (React Router v6)
+├─ services/         # Axios/Fetch instance and error handlers
+├─ utils/            # Helpers, constants, formatters
+└─ pages/            # Main pages (Home, Details, Form)
 ```
 
-**Principales librerías**:
+**Key libraries**:
 
-- **React** + **TypeScript**: base de la UI.
-- **Tailwind CSS**: utilidades de estilos.
-- **React Query (TanStack)** v5: fetching y cache de datos.
-- **React Router** v6: navegación declarativa.
-- **React Hook Form**: manejo y validación de formularios.
-- **React Hot Toast**: notificaciones toast.
-
----
-
-## 🌐 Despliegue
-
-La app está desplegada en Netlify:
-
-**[https://parvaltest.netlify.app/](https://parvaltest.netlify.app/)**
+* **React** + **TypeScript**: UI foundation
+* **Tailwind CSS**: utility-first styling
+* **React Query (TanStack)** v5: data fetching & caching
+* **React Router** v6: declarative routing
+* **React Hook Form**: form state management & validation
+* **React Hot Toast**: toast notifications
 
 ---
+
+## 🌐 Deployment
+
+The app is deployed on Netlify:
+
+**[https://customersupportmodule.netlify.app/](https://customersupportmodule.netlify.app/)**

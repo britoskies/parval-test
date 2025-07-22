@@ -1,6 +1,7 @@
 export interface Request {
   id: number;
   name: string;
+  cedula: string;
   email: string;
   type: string;
   description: string;

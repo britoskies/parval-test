@@ -37,21 +37,21 @@ const RequestDetailPage: React.FC = () => {
     createdAt,
     description,
     updatedAt,
-    priority,
+    cedula,
   } = request as Request & {
     updatedAt?: string;
     priority?: string;
   };
 
   const infoItems: InfoItem[] = [
-    { label: "Request Number", value: `#${requestId}` },
     { label: "Requester Name", value: name },
+    { label: "Request Number", value: `#${requestId}` },
     { label: "Email", value: email },
     { label: "Request Type", value: type },
-    { label: "Status", value: status },
+    { label: "Identification", value: cedula },
     { label: "Created Date", value: removeTimeZone(createdAt) },
+    { label: "Status", value: status },
     { label: "Last Updated", value: removeTimeZone(updatedAt) },
-    { label: "Priority", value: priority ?? "Normal" },
   ];
 
   const handleTake = () => {
